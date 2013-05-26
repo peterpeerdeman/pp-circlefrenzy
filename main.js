@@ -18,7 +18,7 @@ var ppp = {
     settings: {
         fps:60,
         playerSize:50,
-        numberOfCreatures:2,
+        numberOfCreatures:42,
         maxSpeed:4,
         minRadius:2,
         maxRadius:10,
