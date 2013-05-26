@@ -217,8 +217,14 @@ function gameComplete() {
     ppp.ctx.fillText(score/1000 + ' seconds have passed', ppp.W/2, ppp.H/2+20);
     ppp.ctx.fillText('while clearing the circles', ppp.W/2, ppp.H/2+60);
     ppp.ctx.fillText('on a ' + ppp.W + 'x' + ppp.H + ' screen', ppp.W/2,ppp.H/2+100);
+
+    // show the dom for restart button and facebook like
     document.getElementById("pp-postgame-dom").className = "";
-    
+         
+    // analytics
+    if(_gaq) {
+			_gaq.push(['_trackEvent', 'Games', 'circlefrenzy game completed', score]);
+		}     
 }
 
 
