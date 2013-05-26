@@ -1,0 +1,25 @@
+* {
+margin:0;
+}
+
+.pp-hidden {
+  display:none;
+}
+
+.pp-controls {
+  position:absolute;
+  width: 100%;
+  text-align:center;
+}
+.pp-controls-top {
+  top:20px;
+}
+.pp-controls-bottom {
+  bottom:20px;
+}
+
+.pp-buttons {
+  width:100%;
+  margin: 0 auto;
+}
+

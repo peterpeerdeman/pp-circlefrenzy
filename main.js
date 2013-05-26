@@ -18,7 +18,7 @@ var ppp = {
     settings: {
         fps:60,
         playerSize:50,
-        numberOfCreatures:42,
+        numberOfCreatures:2,
         maxSpeed:4,
         minRadius:2,
         maxRadius:10,
@@ -127,7 +127,6 @@ function loop() {
             s.then = s.now - (s.delta % s.interval);
             update();
             draw();
-            printFPS();
         }
     } else {
         gameComplete();
@@ -213,11 +212,13 @@ function gameComplete() {
     ppp.ctx.clearRect(0,0,ppp.W,ppp.H);
     var score = Date.now() - ppp.screenrefresh.start
     ppp.ctx.font = '50pt sans-serif';
-    ppp.ctx.fillText('Congratulations!', ppp.W/2, ppp.H/2);
+    ppp.ctx.fillText('Congratulations!', ppp.W/2, ppp.H/2-40);
     ppp.ctx.font = '30pt sans-serif';
-    ppp.ctx.fillText(score/1000 + ' seconds have passed', ppp.W/2, ppp.H/2+60);
-    ppp.ctx.fillText('while clearing the screen of circles', ppp.W/2, ppp.H/2+100);
-
+    ppp.ctx.fillText(score/1000 + ' seconds have passed', ppp.W/2, ppp.H/2+20);
+    ppp.ctx.fillText('while clearing the circles', ppp.W/2, ppp.H/2+60);
+    ppp.ctx.fillText('on a ' + ppp.W + 'x' + ppp.H + ' screen', ppp.W/2,ppp.H/2+100);
+    document.getElementById("pp-postgame-dom").className = "";
+    
 }
 
 
