@@ -277,8 +277,8 @@ function initializeTimers() {
 // Initialize the canvas
 function initializeCanvas() {
     ppp.canvas = document.getElementById("myCanvas");
-    ppp.canvas.width = document.width;
-    ppp.canvas.height = document.height;
+    ppp.canvas.width = window.innerWidth; // Replaced for document.width
+    ppp.canvas.height = window.innerHeight; // Replaced for document.height
     ppp.W = ppp.canvas.width;
     ppp.H = ppp.canvas.height;
     ppp.ctx = ppp.canvas.getContext("2d");
